@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I D H | نظام التحكم الخيري</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <section class="login-screen" id="loginScreen">
+        <div class="login-card">
+            <div class="login-brand">
+                <div class="brand-mark">I<span>D</span>H</div><strong>منظمة I D H الخيرية</strong>
+            </div>
+            <p class="eyebrow">بوابة التحكم الآمنة</p>
+            <h1>تسجيل الدخول</h1>
+            <p class="login-subtitle">أدخل اسم المستخدم وكلمة المرور للوصول إلى لوحة المعلومات.</p>
+            <form id="loginForm">
+                <label for="username">اسم المستخدم</label>
+                <input id="username" name="username" type="text" autocomplete="username" placeholder="أدخل اسم المستخدم"
+                    required />
+                <label for="password">كلمة المرور</label>
+                <input id="password" name="password" type="password" autocomplete="current-password"
+                    placeholder="أدخل كلمة المرور" required />
+                <p class="login-error" id="loginError" role="alert"></p>
+                <button class="login-btn" type="submit">دخول إلى لوحة التحكم <span>←</span></button>
+            </form>
+            <small class="login-note">حسابات منظمة I D H الخيرية</small>
+        </div>
+    </section>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="brand">
+                <div class="brand-mark">I<span>D</span>H</div>
+                <div>
+                    <strong>I D H</strong>
+                    <small>منظمة خيرية</small>
+                </div>
+            </div>
+            <div class="org-switcher">
+                <span class="org-avatar">ID</span>
+                <span><b>منظمة I D H</b><small>المقر الرئيسي</small></span>
+                <button aria-label="تبديل المنظمة">⌄</button>
+            </div>
+            <nav class="main-nav" aria-label="التنقل الرئيسي">
+                <p>إدارة المنظمة</p>
+                <a class="active" href="#dashboard"><span>▦</span> لوحة المعلومات</a>
+                <a href="#projects"><span>◫</span> المشاريع</a>
+                <a href="#clients"><span>♧</span> العملاء</a>
+                <a href="#employees"><span>♙</span> الموظفون</a>
+                <a href="#offers"><span>▤</span> عروض الأسعار</a>
+                <a href="#tenders"><span>♢</span> المناقصات</a>
+                <a href="#reports"><span>▣</span> التقارير</a>
+                <a href="#dataCenter"><span>▧</span> مركز البيانات</a>
+                <p>الإدارة والإعدادات</p>
+                <a href="#users"><span>♙</span> المستخدمون والصلاحيات</a>
+                <a href="#settings"><span>⚙</span> إعدادات النظام</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="support-card"><span class="support-icon">?</span><b>هل تحتاج للمساعدة؟</b><small>فريق الدعم
+                        متاح لخدمتك</small><button>تواصل معنا <span>←</span></button></div>
+                <div class="profile">
+                    <div class="profile-avatar">E</div>
+                    <div><b>ENGFT</b><small>مدير النظام · كامل الصلاحيات</small></div><button aria-label="خيارات الحساب"
+                        id="changePassword">•••</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content" id="dashboard">
+            <header class="topbar">
+                <button class="mobile-menu" id="menuToggle" aria-label="فتح القائمة">☰</button>
+                <div class="welcome"><span>مرحباً، مدير المنظمة</span><small>نظرة سريعة على أداء منظمة I D H
+                        الخيرية</small></div>
+                <div class="top-actions">
+                    <label class="search"><span>⌕</span><input id="searchInput" type="search"
+                            placeholder="ابحث في النظام" /></label>
+                    <button class="icon-btn notification" id="notificationBtn"
+                        aria-label="الإشعارات"><span>♧</span><i>3</i></button>
+                    <button class="icon-btn theme-toggle" id="themeToggle" aria-label="تفعيل الوضع الداكن"
+                        title="الوضع الداكن"><span>☾</span></button>
+                    <label class="language-picker" aria-label="اختيار اللغة"><span>文</span><select id="languageSelect">
+                            <option value="ar">العربية</option>
+                            <option value="en">English</option>
+                        </select></label>
+                    <button class="date-button"><span>▣</span> 25 سبتمبر 2026 <span>⌄</span></button>
+                    <button class="filter-btn logout-btn" id="logoutButton" type="button" aria-label="تسجيل الخروج"
+                        title="تسجيل الخروج">تسجيل الخروج</button>
+                </div>
+            </header>
+
+            <section class="hero-banner">
+                <div class="hero-copy"><small>نظرة شاملة وفعالة</small>
+                    <h1>لوحة المعلومات</h1>
+                    <p>مركز واحد لمتابعة مشاريع ومبادرات وعملاء منظمة I D H الخيرية</p>
+                </div>
+                <div class="hero-mark logo-holder"><img src="idh-logo.svg" alt="شعار منظمة I D H الخيرية" /><span>منظمة
+                        I D H الخيرية</span></div>
+            </section>
+
+            <section class="stats-grid" id="clients" aria-label="الإحصائيات الرئيسية">
+                <article class="stat-card accent-green">
+                    <div class="stat-icon">↗</div>
+                    <div class="stat-label">المشاريع</div><strong>61 <small>مشروع</small></strong>
+                    <div class="trend positive">قيمة العقود <span>3,555,559 ر.س</span></div>
+                </article>
+                <article class="stat-card accent-blue">
+                    <div class="stat-icon">♧</div>
+                    <div class="stat-label">العملاء</div><strong>28 <small>عميل مسجل</small></strong>
+                    <div class="trend positive">قاعدة عملاء نشطة</div>
+                </article>
+                <article class="stat-card accent-orange">
+                    <div class="stat-icon">▤</div>
+                    <div class="stat-label">المناقصات</div><strong>22 <small>تحت الدراسة</small></strong>
+                    <div class="trend positive">حالة متابعة مستمرة</div>
+                </article>
+                <article class="stat-card accent-purple">
+                    <div class="stat-icon">◇</div>
+                    <div class="stat-label">منافستي</div><strong>23,066,625 <small>ر.س</small></strong>
+                    <div class="trend positive">إجمالي العروض</div>
+                </article>
+            </section>
+
+            <section class="dashboard-grid" id="projects">
+                <article class="panel project-feed" id="offers">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>آخر المشاريع</h2><small>المتابعة اليومية</small>
+                        </div><button class="more-btn">عرض الكل ←</button>
+                    </div>
+                    <div class="project-list">
+                        <div class="project-row"><span class="project-tag teal">مشروع</span>
+                            <div><b>الدفاع المدني - إدارة الفنون</b><small>مشروع قائم · صيانة وتشغيل</small></div>
+                            <strong>8,765 <small>ر.س</small></strong>
+                        </div>
+                        <div class="project-row"><span class="project-tag blue">توريد</span>
+                            <div><b>توريد وتركيب درابزين</b><small>شركة التكامل الكاملة الصناعية</small></div>
+                            <strong>32,666 <small>ر.س</small></strong>
+                        </div>
+                        <div class="project-row"><span class="project-tag yellow">عرض</span>
+                            <div><b>تجهيز قاعة الاجتماعات</b><small>إدارة المشتريات المركزية</small></div>
+                            <strong>544,100 <small>ر.س</small></strong>
+                        </div>
+                    </div>
+                </article>
+                <article class="panel tenders-feed" id="tenders">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>المناقصات</h2><small>آخر طلبات الشراء</small>
+                        </div><button class="more-btn">عرض السجل ←</button>
+                    </div>
+                    <div class="tender-list">
+                        <div class="tender-row"><span class="hash">#</span>
+                            <div><b>تمديدات المواقع والمنافذ</b><small>جامعة الملك سعود · مرجع 260739011199</small>
+                            </div><strong>2026-09-20</strong>
+                        </div>
+                        <div class="tender-row"><span class="hash">#</span>
+                            <div><b>تخصيص سيسب بن</b><small>الشركة التقنية للاتصالات الحديثة</small></div>
+                            <strong>2026-09-19</strong>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="panel transactions" id="reports">
+                <div class="panel-heading">
+                    <div>
+                        <h2>أحدث التبرعات</h2><small>آخر العمليات المسجلة في النظام</small>
+                    </div>
+                    <div class="table-actions"><button class="filter-btn" id="filterBtn">≡ تصفية</button><button
+                            class="more-btn">عرض الكل ←</button></div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>المتبرع</th>
+                                <th>المشروع</th>
+                                <th>التاريخ</th>
+                                <th>طريقة الدفع</th>
+                                <th>المبلغ</th>
+                                <th>الحالة</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionsBody">
+                            <tr>
+                                <td><span class="donor-avatar green-bg">م</span><span class="person">محمد
+                                        العتيبي<small>#IDH-4521</small></span></td>
+                                <td>سقيا الماء</td>
+                                <td>25 سبتمبر 2026</td>
+                                <td><span class="payment">بطاقة ائتمانية</span></td>
+                                <td class="amount">5,000 ر.س</td>
+                                <td><span class="status complete">مكتمل</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="donor-avatar blue-bg">س</span><span class="person">سارة
+                                        القحطاني<small>#IDH-4520</small></span></td>
+                                <td>تعليم وتمكين</td>
+                                <td>24 سبتمبر 2026</td>
+                                <td><span class="payment">تحويل بنكي</span></td>
+                                <td class="amount">2,500 ر.س</td>
+                                <td><span class="status complete">مكتمل</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="donor-avatar orange-bg">خ</span><span class="person">خالد
+                                        السالم<small>#IDH-4519</small></span></td>
+                                <td>سكن كريم</td>
+                                <td>24 سبتمبر 2026</td>
+                                <td><span class="payment">Apple Pay</span></td>
+                                <td class="amount">1,000 ر.س</td>
+                                <td><span class="status pending">قيد المراجعة</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="donor-avatar purple-bg">ن</span><span class="person">نورة
+                                        إبراهيم<small>#IDH-4518</small></span></td>
+                                <td>رعاية صحية</td>
+                                <td>23 سبتمبر 2026</td>
+                                <td><span class="payment">بطاقة ائتمانية</span></td>
+                                <td class="amount">750 ر.س</td>
+                                <td><span class="status complete">مكتمل</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="admin-tools panel" id="users" aria-label="مركز عمليات مدير النظام">
+                <div class="panel-heading">
+                    <div>
+                        <h2>مركز عمليات مدير النظام</h2><small>إدارة كاملة للبيانات والاتصالات داخل النظام</small>
+                    </div><span class="admin-badge">كامل الصلاحيات</span>
+                </div>
+                <div class="tool-grid">
+                    <button class="tool-btn" id="addRecord"><span class="tool-symbol add">＋</span><b>إضافة
+                            سجل</b><small>مشروع أو عميل أو مناقصة</small></button>
+                    <button class="tool-btn" id="deleteRecord"><span class="tool-symbol delete">⌫</span><b>مسح
+                            سجل</b><small>حذف عنصر محدد من البيانات</small></button>
+                    <button class="tool-btn" id="sendMessage"><span class="tool-symbol send">➤</span><b>إرسال
+                            رسالة</b><small>إشعار إلى أعضاء النظام</small></button>
+                    <button class="tool-btn" id="inboxButton"><span class="tool-symbol receive">↓</span><b>الوارد
+                            والاستقبال</b><small>عرض الرسائل والطلبات الواردة</small></button>
+                    <button class="tool-btn" id="exportData"><span class="tool-symbol export">⇩</span><b>تصدير
+                            البيانات</b><small>تنزيل نسخة من معلومات النظام</small></button>
+                    <button class="tool-btn danger-tool" id="clearData"><span
+                            class="tool-symbol delete">✕</span><b>إفراغ النظام</b><small>حذف البيانات المحلية
+                            بالكامل</small></button>
+                </div>
+                <div class="inbox-preview" id="inboxPreview" hidden><b>الوارد الأخير</b><span>طلب تحديث بيانات مشروع سكن
+                        كريم <small>منذ 8 دقائق</small></span><span>رسالة من قسم المتابعة <small>منذ 24
+                            دقيقة</small></span></div>
+            </section>
+            <section class="workspace-panel panel" id="workspacePanel" hidden>
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">مساحة الإدارة</p>
+                        <h2 id="workspaceTitle">إدارة القسم</h2><small id="workspaceSubtitle">يمكنك الإضافة والتعديل
+                            والحذف والحفظ</small>
+                    </div>
+                    <button class="filter-btn" id="closeWorkspace">إغلاق ×</button>
+                </div>
+                <div id="workspaceContent"></div>
+            </section>
+            <section class="communications-grid" id="settings">
+                <article class="panel social-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>قنوات التواصل الاجتماعي</h2><small>حسابات منظمة I D H الرسمية</small>
+                        </div><button class="more-btn" id="editChannels">تعديل القنوات ←</button>
+                    </div>
+                    <div class="social-list"><a href="https://wa.me/" target="_blank" rel="noreferrer"><span
+                                class="social-icon whatsapp">◔</span><span><b>واتساب الأعمال</b><small>تواصل مباشر مع
+                                    المستفيدين</small></span><strong>متصل</strong></a><a
+                            href="https://www.facebook.com/" target="_blank" rel="noreferrer"><span
+                                class="social-icon facebook">f</span><span><b>فيسبوك</b><small>صفحة المنظمة
+                                    الرسمية</small></span><strong>متصل</strong></a><a href="https://www.youtube.com/"
+                            target="_blank" rel="noreferrer"><span
+                                class="social-icon youtube">▶</span><span><b>يوتيوب</b><small>حملات وتقارير
+                                    المنظمة</small></span><strong>متصل</strong></a><a href="https://www.instagram.com/"
+                            target="_blank" rel="noreferrer"><span
+                                class="social-icon instagram">◎</span><span><b>إنستغرام</b><small>أخبار ومبادرات I D
+                                    H</small></span><strong>متصل</strong></a></div>
+                </article>
+                <article class="panel email-wallet">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>محفظة البريد الإلكتروني</h2><small>إدارة مراسلات المنظمة</small>
+                        </div><button class="more-btn" id="composeEmail">＋ رسالة جديدة</button>
+                    </div>
+                    <div class="email-stats">
+                        <div><strong>24</strong><span>الوارد</span></div>
+                        <div><strong>8</strong><span>غير مقروء</span></div>
+                        <div><strong>16</strong><span>مرسل</span></div>
+                    </div>
+                    <div class="email-account"><span class="mail-icon">@</span>
+                        <div><b>itis@mydutyto.help</b><small>الحساب الرئيسي للمنظمة</small></div><span
+                            class="online-dot"></span>
+                    </div><button class="email-open" id="openEmail">فتح صندوق البريد <span>←</span></button>
+                </article>
+            </section>
+            <footer><span>© 2026 منظمة I D H الخيرية</span><span>آخر تحديث: منذ 5 دقائق</span></footer>
+        </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>

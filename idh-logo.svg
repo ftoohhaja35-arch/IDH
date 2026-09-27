@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">شعار منظمة IDH الخيرية</title>
+  <desc id="desc">شعار دائري أزرق لمنظمة IDH الخيرية</desc>
+  <circle cx="160" cy="160" r="151" fill="#fff" stroke="#27458d" stroke-width="7"/>
+  <circle cx="160" cy="160" r="116" fill="none" stroke="#27458d" stroke-width="4"/>
+  <path d="M72 70 Q160 24 248 70" fill="none" stroke="#111" stroke-width="1" opacity=".35"/>
+  <text x="160" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#111">منظمة I D H الخيرية</text>
+  <path d="M82 204 Q112 150 139 212 Q159 236 160 257 Q161 236 181 212 Q208 150 238 204 Q219 161 160 183 Q101 161 82 204Z" fill="#4aa9d2"/>
+  <circle cx="121" cy="122" r="16" fill="#2e6ea9"/><path d="M105 143 Q121 128 137 143 L131 175 Q121 184 111 175Z" fill="#2e6ea9"/>
+  <circle cx="160" cy="110" r="17" fill="#d8322f"/><path d="M142 132 Q160 114 178 132 L171 179 Q160 188 149 179Z" fill="#d8322f"/>
+  <circle cx="199" cy="122" r="16" fill="#4aa85b"/><path d="M183 143 Q199 128 215 143 L209 175 Q199 184 189 175Z" fill="#4aa85b"/>
+  <text x="160" y="286" text-anchor="middle" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#111">IDH</text>
+  <text x="160" y="307" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#111">Charity Organization</text>
+</svg>
